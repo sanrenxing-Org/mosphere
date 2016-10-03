@@ -1,0 +1,126 @@
+2016-10-03 04:25:13 [::1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The directory does not exist: D:/wamp/www/mosphere.cn/web/assets in D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\web\AssetManager.php:211
+Stack trace:
+#0 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#3 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\web\View.php(283): yii\web\View->getAssetManager()
+#9 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\web\AssetBundle.php(123): yii\web\View->registerAssetBundle('app\\assets\\AppA...')
+#10 D:\wamp\www\mosphere.cn\views\layouts\main.php(12): yii\web\AssetBundle::register(Object(yii\web\View))
+#11 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\View.php(325): require('D:\\wamp\\www\\mos...')
+#12 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\wamp\\www\\mos...', Array)
+#13 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('D:\\wamp\\www\\mos...', Array, Object(app\controllers\SiteController))
+#14 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#15 D:\wamp\www\mosphere.cn\controllers\SiteController.php(63): yii\base\Controller->render('index')
+#16 [internal function]: app\controllers\SiteController->actionIndex()
+#17 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#20 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('', Array)
+#21 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\wamp\www\mosphere.cn\web\index.php(12): yii\base\Application->run()
+#23 {main}
+2016-10-03 04:25:13 [::1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/mosphere.cn/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\TortoisesSVN\\bin;D:\\phpStudy2016\\php70n;D:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;D:\\TortoisesGit\\bin;D:\\Git\\cmd'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/mosphere.cn/web/index.php'
+    'REMOTE_PORT' => '49926'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/mosphere.cn/web/'
+    'SCRIPT_NAME' => '/mosphere.cn/web/index.php'
+    'PHP_SELF' => '/mosphere.cn/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475468713.638
+    'REQUEST_TIME' => 1475468713
+]
+2016-10-03 04:25:13 [::1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception (Invalid Configuration) 'yii\base\InvalidConfigException' with message 'The directory does not exist: D:/wamp/www/mosphere.cn/web/assets' 
+
+in D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\web\AssetManager.php:211
+
+Stack trace:
+#0 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\Object.php(107): yii\web\AssetManager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#3 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\web\\AssetMa...', Array, Array)
+#4 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\web\\AssetMa...', Array, Array)
+#5 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#6 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\Application.php(600): yii\di\ServiceLocator->get('assetManager')
+#7 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\web\View.php(223): yii\base\Application->getAssetManager()
+#8 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\Component.php(130): yii\web\View->getAssetManager()
+#9 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2-debug\panels\AssetPanel.php(53): yii\base\Component->__get('assetManager')
+#10 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2-debug\LogTarget.php(54): yii\debug\panels\AssetPanel->save()
+#11 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#12 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#13 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#14 D:\wamp\www\mosphere.cn\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#15 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#16 {main}
+2016-10-03 04:25:13 [::1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/mosphere.cn/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\TortoisesSVN\\bin;D:\\phpStudy2016\\php70n;D:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;D:\\TortoisesGit\\bin;D:\\Git\\cmd'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'D:/wamp/www/mosphere.cn/web/index.php'
+    'REMOTE_PORT' => '49926'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/mosphere.cn/web/'
+    'SCRIPT_NAME' => '/mosphere.cn/web/index.php'
+    'PHP_SELF' => '/mosphere.cn/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475468713.638
+    'REQUEST_TIME' => 1475468713
+]
