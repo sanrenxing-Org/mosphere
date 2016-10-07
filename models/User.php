@@ -1,7 +1,9 @@
 <?php
 namespace app\models;
 
-class User extends /*\yii\base\Object*/ \yii\db\ActiveRecord implements \yii\web\IdentityInterface
+use yii\db\ActiveRecord;
+use Yii;
+class User extends ActiveRecord implements \yii\web\IdentityInterface
 {
     /*public $id;
     public $username;
@@ -32,7 +34,7 @@ class User extends /*\yii\base\Object*/ \yii\db\ActiveRecord implements \yii\web
      */
     public static function tableName()
     {
-        return 'user';
+        return 'mos_user';
     }
 
     /**
@@ -146,6 +148,6 @@ class User extends /*\yii\base\Object*/ \yii\db\ActiveRecord implements \yii\web
      */
     public function validatePassword($password)
     {
-        return $this->password === $password;
+        return $this->password === md5($password);
     }
 }
