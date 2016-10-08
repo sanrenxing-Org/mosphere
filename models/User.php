@@ -5,30 +5,7 @@ use yii\db\ActiveRecord;
 use Yii;
 class User extends ActiveRecord implements \yii\web\IdentityInterface
 {
-    /*public $id;
-    public $username;
-    public $password;
-    public $authKey;
-    public $accessToken;
-
-    private static $users = [
-        '100' => [
-            'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
-        ],
-        '101' => [
-            'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'accessToken' => '101-token',
-        ],
-    ];
-*/
-
+    
     /**
      * @inheritdoc
      */
@@ -71,7 +48,6 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
     public static function findIdentity($id)
     {
         return static::findOne($id);
-        //return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
     }
 
     /**
@@ -80,13 +56,6 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
     public static function findIdentityByAccessToken($token, $type = null)
     {
         return static::findOne(['access_token' => $token]);
-        /*foreach (self::$users as $user) {
-            if ($user['accessToken'] === $token) {
-                return new static($user);
-            }
-        }
-
-        return null;*/
     }
 
     /**
@@ -107,13 +76,6 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
         }
 
         return null;
-        /*foreach (self::$users as $user) {
-            if (strcasecmp($user['username'], $username) === 0) {
-                return new static($user);
-            }
-        }
-
-        return null;*/
     }
 
     /**
@@ -139,7 +101,17 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
     {
         return $this->authKey === $authKey;
     }
-
+	
+    /**
+     * Generates password hash from password and sets it to the model
+     * 
+     * @param string $password
+     */
+    public function setPassword($password)
+    {
+    	$this->password = md5($password);
+    }
+    
     /**
      * Validates password
      *
