@@ -91,6 +91,13 @@ class SiteController extends Controller
      */
 	public function actionRegister()
 	{
+		$mail= Yii::$app->mailer->compose(); //加载模板这样写：$mail= Yii::$app->mailer->compose('moban',['key'=>'value']);
+		$mail->setTo('296495567@qq.com'); //要发送给那个人的邮箱
+		$mail->setSubject("邮件主题"); //邮件主题
+		$mail->setTextBody('测试text'); //发布纯文字文本
+		$mail->setHtmlBody("hellow,world"); //发送的消息内容
+		var_dump($mail->send());exit;
+		
 	    $model = new RegisterForm();
 	    if ($model->load(Yii::$app->request->post())) {
 	        if ($user = $model->register()) {

@@ -2772,3 +2772,874 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1475903411.218
     'REQUEST_TIME' => 1475903411
 ]
+2016-10-09 03:25:16 [::1][-][-][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Invalid path alias: @common/mail in F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(364): yii\BaseYii::getAlias('@common/mail')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php(169): yii\mail\BaseMailer->setViewPath('@common/mail')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('viewPath', '@common/mail')
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\swiftmailer\Mailer), Array)
+#4 [internal function]: yii\base\Object->__construct(Array)
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\swiftmailer...', Array, Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\swiftmailer...', Array, Array)
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get('mailer')
+#10 F:\wamp\www\mosphere\controllers\SiteController.php(94): yii\di\ServiceLocator->__get('mailer')
+#11 [internal function]: app\controllers\SiteController->actionRegister()
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#16 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#18 {main}
+2016-10-09 03:25:16 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc\";}'
+    'PHPSESSID' => 'ipsf48414k7uil4b37rfghg8b6'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_REFERER' => 'http://localhost/mosphere/web/index.php?r=site%2Fcontact'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc%22%3B%7D; PHPSESSID=ipsf48414k7uil4b37rfghg8b6'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '50647'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475983516.033
+    'REQUEST_TIME' => 1475983516
+]
+2016-10-09 03:27:36 [::1][-][-][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Invalid path alias: @common/mail in F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(364): yii\BaseYii::getAlias('@common/mail')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php(169): yii\mail\BaseMailer->setViewPath('@common/mail')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('viewPath', '@common/mail')
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\swiftmailer\Mailer), Array)
+#4 [internal function]: yii\base\Object->__construct(Array)
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\swiftmailer...', Array, Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\swiftmailer...', Array, Array)
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get('mailer')
+#10 F:\wamp\www\mosphere\controllers\SiteController.php(94): yii\di\ServiceLocator->__get('mailer')
+#11 [internal function]: app\controllers\SiteController->actionRegister()
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#16 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#18 {main}
+2016-10-09 03:27:36 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc\";}'
+    'PHPSESSID' => 'ipsf48414k7uil4b37rfghg8b6'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc%22%3B%7D; PHPSESSID=ipsf48414k7uil4b37rfghg8b6'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '50650'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475983656.903
+    'REQUEST_TIME' => 1475983656
+]
+2016-10-09 03:28:37 [::1][-][-][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Invalid path alias: @common/mail in F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(364): yii\BaseYii::getAlias('@common/mail')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php(169): yii\mail\BaseMailer->setViewPath('@common/mail')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('viewPath', '@common/mail')
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\swiftmailer\Mailer), Array)
+#4 [internal function]: yii\base\Object->__construct(Array)
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\swiftmailer...', Array, Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\swiftmailer...', Array, Array)
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get('mailer')
+#10 F:\wamp\www\mosphere\controllers\SiteController.php(94): yii\di\ServiceLocator->__get('mailer')
+#11 [internal function]: app\controllers\SiteController->actionRegister()
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#16 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#18 {main}
+2016-10-09 03:28:37 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc\";}'
+    'PHPSESSID' => 'ipsf48414k7uil4b37rfghg8b6'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc%22%3B%7D; PHPSESSID=ipsf48414k7uil4b37rfghg8b6'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '50653'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475983717.263
+    'REQUEST_TIME' => 1475983717
+]
+2016-10-09 03:28:38 [::1][-][-][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Invalid path alias: @common/mail in F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(364): yii\BaseYii::getAlias('@common/mail')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php(169): yii\mail\BaseMailer->setViewPath('@common/mail')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('viewPath', '@common/mail')
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\swiftmailer\Mailer), Array)
+#4 [internal function]: yii\base\Object->__construct(Array)
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\swiftmailer...', Array, Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\swiftmailer...', Array, Array)
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get('mailer')
+#10 F:\wamp\www\mosphere\controllers\SiteController.php(94): yii\di\ServiceLocator->__get('mailer')
+#11 [internal function]: app\controllers\SiteController->actionRegister()
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#16 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#18 {main}
+2016-10-09 03:28:38 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc\";}'
+    'PHPSESSID' => 'ipsf48414k7uil4b37rfghg8b6'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc%22%3B%7D; PHPSESSID=ipsf48414k7uil4b37rfghg8b6'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '50654'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475983718.15
+    'REQUEST_TIME' => 1475983718
+]
+2016-10-09 03:28:38 [::1][-][-][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Invalid path alias: @common/mail in F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(364): yii\BaseYii::getAlias('@common/mail')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php(169): yii\mail\BaseMailer->setViewPath('@common/mail')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('viewPath', '@common/mail')
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\swiftmailer\Mailer), Array)
+#4 [internal function]: yii\base\Object->__construct(Array)
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\swiftmailer...', Array, Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\swiftmailer...', Array, Array)
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get('mailer')
+#10 F:\wamp\www\mosphere\controllers\SiteController.php(94): yii\di\ServiceLocator->__get('mailer')
+#11 [internal function]: app\controllers\SiteController->actionRegister()
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#16 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#18 {main}
+2016-10-09 03:28:38 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc\";}'
+    'PHPSESSID' => 'ipsf48414k7uil4b37rfghg8b6'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc%22%3B%7D; PHPSESSID=ipsf48414k7uil4b37rfghg8b6'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '50655'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475983718.781
+    'REQUEST_TIME' => 1475983718
+]
+2016-10-09 03:28:39 [::1][-][-][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Invalid path alias: @common/mail in F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(364): yii\BaseYii::getAlias('@common/mail')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php(169): yii\mail\BaseMailer->setViewPath('@common/mail')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('viewPath', '@common/mail')
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\swiftmailer\Mailer), Array)
+#4 [internal function]: yii\base\Object->__construct(Array)
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\swiftmailer...', Array, Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\swiftmailer...', Array, Array)
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get('mailer')
+#10 F:\wamp\www\mosphere\controllers\SiteController.php(94): yii\di\ServiceLocator->__get('mailer')
+#11 [internal function]: app\controllers\SiteController->actionRegister()
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#16 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#18 {main}
+2016-10-09 03:28:39 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc\";}'
+    'PHPSESSID' => 'ipsf48414k7uil4b37rfghg8b6'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc%22%3B%7D; PHPSESSID=ipsf48414k7uil4b37rfghg8b6'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '50656'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475983719.03
+    'REQUEST_TIME' => 1475983719
+]
+2016-10-09 03:28:39 [::1][-][-][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Invalid path alias: @common/mail in F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(364): yii\BaseYii::getAlias('@common/mail')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php(169): yii\mail\BaseMailer->setViewPath('@common/mail')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('viewPath', '@common/mail')
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\swiftmailer\Mailer), Array)
+#4 [internal function]: yii\base\Object->__construct(Array)
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\swiftmailer...', Array, Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\swiftmailer...', Array, Array)
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get('mailer')
+#10 F:\wamp\www\mosphere\controllers\SiteController.php(94): yii\di\ServiceLocator->__get('mailer')
+#11 [internal function]: app\controllers\SiteController->actionRegister()
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#16 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#18 {main}
+2016-10-09 03:28:39 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc\";}'
+    'PHPSESSID' => 'ipsf48414k7uil4b37rfghg8b6'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc%22%3B%7D; PHPSESSID=ipsf48414k7uil4b37rfghg8b6'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '50657'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475983719.233
+    'REQUEST_TIME' => 1475983719
+]
+2016-10-09 03:28:39 [::1][-][-][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Invalid path alias: @common/mail in F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(364): yii\BaseYii::getAlias('@common/mail')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php(169): yii\mail\BaseMailer->setViewPath('@common/mail')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('viewPath', '@common/mail')
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\swiftmailer\Mailer), Array)
+#4 [internal function]: yii\base\Object->__construct(Array)
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\swiftmailer...', Array, Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\swiftmailer...', Array, Array)
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get('mailer')
+#10 F:\wamp\www\mosphere\controllers\SiteController.php(94): yii\di\ServiceLocator->__get('mailer')
+#11 [internal function]: app\controllers\SiteController->actionRegister()
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#16 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#18 {main}
+2016-10-09 03:28:39 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc\";}'
+    'PHPSESSID' => 'ipsf48414k7uil4b37rfghg8b6'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc%22%3B%7D; PHPSESSID=ipsf48414k7uil4b37rfghg8b6'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '50658'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475983719.832
+    'REQUEST_TIME' => 1475983719
+]
+2016-10-09 03:35:55 [::1][-][-][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Invalid path alias: @common/mail in F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(364): yii\BaseYii::getAlias('@common/mail')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php(169): yii\mail\BaseMailer->setViewPath('@common/mail')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('viewPath', '@common/mail')
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\swiftmailer\Mailer), Array)
+#4 [internal function]: yii\base\Object->__construct(Array)
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\swiftmailer...', Array, Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\swiftmailer...', Array, Array)
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get('mailer')
+#10 F:\wamp\www\mosphere\controllers\SiteController.php(94): yii\di\ServiceLocator->__get('mailer')
+#11 [internal function]: app\controllers\SiteController->actionRegister()
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#16 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#18 {main}
+2016-10-09 03:35:55 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc\";}'
+    'PHPSESSID' => 'ipsf48414k7uil4b37rfghg8b6'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc%22%3B%7D; PHPSESSID=ipsf48414k7uil4b37rfghg8b6'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '50733'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475984155.154
+    'REQUEST_TIME' => 1475984155
+]
+2016-10-09 03:35:56 [::1][-][-][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Invalid path alias: @common/mail in F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(364): yii\BaseYii::getAlias('@common/mail')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php(169): yii\mail\BaseMailer->setViewPath('@common/mail')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('viewPath', '@common/mail')
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\swiftmailer\Mailer), Array)
+#4 [internal function]: yii\base\Object->__construct(Array)
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\swiftmailer...', Array, Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\swiftmailer...', Array, Array)
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get('mailer')
+#10 F:\wamp\www\mosphere\controllers\SiteController.php(94): yii\di\ServiceLocator->__get('mailer')
+#11 [internal function]: app\controllers\SiteController->actionRegister()
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#16 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#18 {main}
+2016-10-09 03:35:56 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc\";}'
+    'PHPSESSID' => 'ipsf48414k7uil4b37rfghg8b6'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc%22%3B%7D; PHPSESSID=ipsf48414k7uil4b37rfghg8b6'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '50735'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475984156.877
+    'REQUEST_TIME' => 1475984156
+]
+2016-10-09 03:50:36 [::1][-][-][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Invalid path alias: @common/mail in F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(364): yii\BaseYii::getAlias('@common/mail')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php(169): yii\mail\BaseMailer->setViewPath('@common/mail')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('viewPath', '@common/mail')
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\swiftmailer\Mailer), Array)
+#4 [internal function]: yii\base\Object->__construct(Array)
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\swiftmailer...', Array, Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\swiftmailer...', Array, Array)
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get('mailer')
+#10 F:\wamp\www\mosphere\controllers\SiteController.php(94): yii\di\ServiceLocator->__get('mailer')
+#11 [internal function]: app\controllers\SiteController->actionRegister()
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#16 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#18 {main}
+2016-10-09 03:50:36 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc\";}'
+    'PHPSESSID' => 'ipsf48414k7uil4b37rfghg8b6'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_REFERER' => 'http://localhost/mosphere/web/index.php?r=site%2Fcontact'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc%22%3B%7D; PHPSESSID=ipsf48414k7uil4b37rfghg8b6'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '50910'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475985036.164
+    'REQUEST_TIME' => 1475985036
+]
+2016-10-09 03:51:20 [::1][-][-][error][yii\base\InvalidParamException] yii\base\InvalidParamException: Invalid path alias: @mail in F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php:152
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(364): yii\BaseYii::getAlias('@mail')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php(169): yii\mail\BaseMailer->setViewPath('@mail')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('viewPath', '@mail')
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\swiftmailer\Mailer), Array)
+#4 [internal function]: yii\base\Object->__construct(Array)
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\swiftmailer...', Array, Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\swiftmailer...', Array, Array)
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get('mailer')
+#10 F:\wamp\www\mosphere\controllers\SiteController.php(94): yii\di\ServiceLocator->__get('mailer')
+#11 [internal function]: app\controllers\SiteController->actionRegister()
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#16 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#18 {main}
+2016-10-09 03:51:20 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc\";}'
+    'PHPSESSID' => 'ipsf48414k7uil4b37rfghg8b6'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_REFERER' => 'http://localhost/mosphere/web/index.php?r=site%2Fcontact'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc%22%3B%7D; PHPSESSID=ipsf48414k7uil4b37rfghg8b6'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '50913'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475985080.782
+    'REQUEST_TIME' => 1475985080
+]
+2016-10-09 05:08:18 [::1][-][-][error][Swift_TransportException] Swift_TransportException: Connection could not be established with host smtp.hotmail.com [php_network_getaddresses: getaddrinfo failed: 不知道这样的主机。  #0] in F:\wamp\www\mosphere\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php:269
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 F:\wamp\www\mosphere\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 F:\wamp\www\mosphere\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2-swiftmailer\Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(260): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMessage.php(48): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#6 F:\wamp\www\mosphere\controllers\SiteController.php(99): yii\mail\BaseMessage->send()
+#7 [internal function]: app\controllers\SiteController->actionRegister()
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#11 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#14 {main}
+2016-10-09 05:08:18 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc\";}'
+    'PHPSESSID' => 'ipsf48414k7uil4b37rfghg8b6'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_REFERER' => 'http://localhost/mosphere/web/index.php?r=site%2Fcontact'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=a260694272f5e9bcfafe6c3ec94f56a155bf8e5fb8d42076c53eba307c328584a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22n-PhZJJeKfgHMe4CxubNXN1U9ud_kFyc%22%3B%7D; PHPSESSID=ipsf48414k7uil4b37rfghg8b6'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '51983'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1475989698.308
+    'REQUEST_TIME' => 1475989698
+]
