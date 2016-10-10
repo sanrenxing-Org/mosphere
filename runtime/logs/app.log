@@ -3643,3 +3643,508 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1475989698.308
     'REQUEST_TIME' => 1475989698
 ]
+2016-10-10 05:24:43 [::1][-][-][error][Swift_TransportException] Swift_TransportException: Expected response code 250 but got code "", with message "" in F:\wamp\www\mosphere\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php:383
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('', Array)
+#1 F:\wamp\www\mosphere\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(270): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\r\n', Array, Array)
+#2 F:\wamp\www\mosphere\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\Auth\PlainAuthenticator.php(45): Swift_Transport_EsmtpTransport->executeCommand('RSET\r\n', Array)
+#3 F:\wamp\www\mosphere\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php(176): Swift_Transport_Esmtp_Auth_PlainAuthenticator->authenticate(Object(Swift_SmtpTransport), 'yangpufeng@outl...', '*****')
+#4 F:\wamp\www\mosphere\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(334): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#5 F:\wamp\www\mosphere\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(118): Swift_Transport_EsmtpTransport->_doHeloCommand()
+#6 F:\wamp\www\mosphere\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2-swiftmailer\Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMailer.php(260): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\mail\BaseMessage.php(48): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#10 F:\wamp\www\mosphere\controllers\SiteController.php(99): yii\mail\BaseMessage->send()
+#11 [internal function]: app\controllers\SiteController->actionRegister()
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#16 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#18 {main}
+2016-10-10 05:24:39 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'd4161b2b603ce5a8a026a08c35e0b22613b0f2287b9a500e8b9820cc70f05665a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"X72LWkbjDvow8SOo-1MjMrkebi94urbV\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.89 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/mosphere/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf=d4161b2b603ce5a8a026a08c35e0b22613b0f2287b9a500e8b9820cc70f05665a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22X72LWkbjDvow8SOo-1MjMrkebi94urbV%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '55619'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1476077079.497
+    'REQUEST_TIME' => 1476077079
+]
+2016-10-10 05:39:33 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\RegisterForm::code in F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\helpers\BaseHtml.php(2033): yii\base\Component->__get('code')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\helpers\BaseHtml.php(1234): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\RegisterForm), 'code')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\helpers\BaseHtml.php(1283): yii\helpers\BaseHtml::activeInput('text', Object(app\models\RegisterForm), 'code', Array)
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\widgets\ActiveField.php(367): yii\helpers\BaseHtml::activeTextInput(Object(app\models\RegisterForm), 'code', Array)
+#4 F:\wamp\www\mosphere\views\site\register.php(27): yii\widgets\ActiveField->textInput()
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(325): require('F:\\wamp\\www\\mos...')
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\\wamp\\www\\mos...', Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\\wamp\\www\\mos...', Array, Object(app\controllers\SiteController))
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('register', Array, Object(app\controllers\SiteController))
+#9 F:\wamp\www\mosphere\controllers\SiteController.php(109): yii\base\Controller->render('register', Array)
+#10 [internal function]: app\controllers\SiteController->actionRegister()
+#11 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('register', Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/register', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#17 {main}
+2016-10-10 05:39:33 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/register'
+]
+
+$_COOKIE = [
+    '_csrf' => 'd4161b2b603ce5a8a026a08c35e0b22613b0f2287b9a500e8b9820cc70f05665a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"X72LWkbjDvow8SOo-1MjMrkebi94urbV\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.89 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/mosphere/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_csrf=d4161b2b603ce5a8a026a08c35e0b22613b0f2287b9a500e8b9820cc70f05665a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22X72LWkbjDvow8SOo-1MjMrkebi94urbV%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '56540'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fregister'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Fregister'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1476077973.625
+    'REQUEST_TIME' => 1476077973
+]
+2016-10-10 08:24:25 [::1][-][-][error][Error] Error: Class 'ActiveForm' not found in F:\wamp\www\mosphere\views\site\account.php:20
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(325): require()
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\\wamp\\www\\mos...', Array)
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\\wamp\\www\\mos...', Array, Object(app\controllers\SiteController))
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('account', Array, Object(app\controllers\SiteController))
+#4 F:\wamp\www\mosphere\controllers\SiteController.php(165): yii\base\Controller->render('account')
+#5 [internal function]: app\controllers\SiteController->actionAccount()
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('account', Array)
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/account', Array)
+#10 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#12 {main}
+2016-10-10 08:24:25 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/account'
+]
+
+$_COOKIE = [
+    '_csrf' => 'fccd657398ca569f1e6ae8f184628b2891339dfe53403f2e4332d67217979f82a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S0lg60pauIJwvAuhV40FgGO455-DwDDe\";}'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=fccd657398ca569f1e6ae8f184628b2891339dfe53403f2e4332d67217979f82a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S0lg60pauIJwvAuhV40FgGO455-DwDDe%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '63747'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Faccount'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Faccount'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1476087865.538
+    'REQUEST_TIME' => 1476087865
+]
+2016-10-10 08:24:25 [::1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in F:\wamp\www\mosphere\vendor\yiisoft\yii2-debug\LogTarget.php:57
+
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2-debug\LogTarget.php(57): serialize(Array)
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\log\Dispatcher.php(188): yii\debug\LogTarget->collect(Array, true)
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(Error))
+#6 {main}
+2016-10-10 08:24:25 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/account'
+]
+
+$_COOKIE = [
+    '_csrf' => 'fccd657398ca569f1e6ae8f184628b2891339dfe53403f2e4332d67217979f82a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S0lg60pauIJwvAuhV40FgGO455-DwDDe\";}'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=fccd657398ca569f1e6ae8f184628b2891339dfe53403f2e4332d67217979f82a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S0lg60pauIJwvAuhV40FgGO455-DwDDe%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '63747'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Faccount'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Faccount'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1476087865.538
+    'REQUEST_TIME' => 1476087865
+]
+2016-10-10 08:24:46 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: model in F:\wamp\www\mosphere\views\site\account.php:23
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 F:\wamp\www\mosphere\controllers\SiteController.php(165): yii\base\Controller->render()
+#4 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): app\controllers\SiteController->actionAccount()
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction()
+#9 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#11 {main}
+2016-10-10 08:24:46 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/account'
+]
+
+$_COOKIE = [
+    '_csrf' => 'fccd657398ca569f1e6ae8f184628b2891339dfe53403f2e4332d67217979f82a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S0lg60pauIJwvAuhV40FgGO455-DwDDe\";}'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=fccd657398ca569f1e6ae8f184628b2891339dfe53403f2e4332d67217979f82a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S0lg60pauIJwvAuhV40FgGO455-DwDDe%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '63757'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Faccount'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Faccount'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1476087886.602
+    'REQUEST_TIME' => 1476087886
+]
+2016-10-10 08:26:23 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\RegisterForm::name in F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\helpers\BaseHtml.php(2033): yii\base\Component->__get('name')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\helpers\BaseHtml.php(1234): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\RegisterForm), 'name')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\helpers\BaseHtml.php(1283): yii\helpers\BaseHtml::activeInput('text', Object(app\models\RegisterForm), 'name', Array)
+#3 F:\wamp\www\mosphere\vendor\yiisoft\yii2\widgets\ActiveField.php(367): yii\helpers\BaseHtml::activeTextInput(Object(app\models\RegisterForm), 'name', Array)
+#4 F:\wamp\www\mosphere\views\site\account.php(23): yii\widgets\ActiveField->textInput()
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(325): require('F:\\wamp\\www\\mos...')
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\\wamp\\www\\mos...', Array)
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\\wamp\\www\\mos...', Array, Object(app\controllers\SiteController))
+#8 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('account', Array, Object(app\controllers\SiteController))
+#9 F:\wamp\www\mosphere\controllers\SiteController.php(163): yii\base\Controller->render('account', Array)
+#10 [internal function]: app\controllers\SiteController->actionAccount()
+#11 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('account', Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/account', Array)
+#15 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#17 {main}
+2016-10-10 08:26:23 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/account'
+]
+
+$_COOKIE = [
+    '_csrf' => 'fccd657398ca569f1e6ae8f184628b2891339dfe53403f2e4332d67217979f82a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S0lg60pauIJwvAuhV40FgGO455-DwDDe\";}'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=fccd657398ca569f1e6ae8f184628b2891339dfe53403f2e4332d67217979f82a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S0lg60pauIJwvAuhV40FgGO455-DwDDe%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '63797'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Faccount'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Faccount'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1476087983.737
+    'REQUEST_TIME' => 1476087983
+]
+2016-10-10 08:26:58 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\RegisterForm::body in F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\helpers\BaseHtml.php(2033): yii\base\Component->__get('body')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\helpers\BaseHtml.php(1375): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\RegisterForm), 'body')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\widgets\ActiveField.php(458): yii\helpers\BaseHtml::activeTextarea(Object(app\models\RegisterForm), 'body', Array)
+#3 F:\wamp\www\mosphere\views\site\account.php(28): yii\widgets\ActiveField->textarea(Array)
+#4 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(325): require('F:\\wamp\\www\\mos...')
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\\wamp\\www\\mos...', Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\\wamp\\www\\mos...', Array, Object(app\controllers\SiteController))
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('account', Array, Object(app\controllers\SiteController))
+#8 F:\wamp\www\mosphere\controllers\SiteController.php(163): yii\base\Controller->render('account', Array)
+#9 [internal function]: app\controllers\SiteController->actionAccount()
+#10 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('account', Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/account', Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#16 {main}
+2016-10-10 08:26:58 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/account'
+]
+
+$_COOKIE = [
+    '_csrf' => 'fccd657398ca569f1e6ae8f184628b2891339dfe53403f2e4332d67217979f82a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S0lg60pauIJwvAuhV40FgGO455-DwDDe\";}'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=fccd657398ca569f1e6ae8f184628b2891339dfe53403f2e4332d67217979f82a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S0lg60pauIJwvAuhV40FgGO455-DwDDe%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '63799'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Faccount'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Faccount'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1476088018.664
+    'REQUEST_TIME' => 1476088018
+]
+2016-10-10 08:26:59 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\RegisterForm::body in F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 F:\wamp\www\mosphere\vendor\yiisoft\yii2\helpers\BaseHtml.php(2033): yii\base\Component->__get('body')
+#1 F:\wamp\www\mosphere\vendor\yiisoft\yii2\helpers\BaseHtml.php(1375): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\RegisterForm), 'body')
+#2 F:\wamp\www\mosphere\vendor\yiisoft\yii2\widgets\ActiveField.php(458): yii\helpers\BaseHtml::activeTextarea(Object(app\models\RegisterForm), 'body', Array)
+#3 F:\wamp\www\mosphere\views\site\account.php(28): yii\widgets\ActiveField->textarea(Array)
+#4 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(325): require('F:\\wamp\\www\\mos...')
+#5 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\\wamp\\www\\mos...', Array)
+#6 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\\wamp\\www\\mos...', Array, Object(app\controllers\SiteController))
+#7 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('account', Array, Object(app\controllers\SiteController))
+#8 F:\wamp\www\mosphere\controllers\SiteController.php(163): yii\base\Controller->render('account', Array)
+#9 [internal function]: app\controllers\SiteController->actionAccount()
+#10 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#12 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('account', Array)
+#13 F:\wamp\www\mosphere\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/account', Array)
+#14 F:\wamp\www\mosphere\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 F:\wamp\www\mosphere\web\index.php(11): yii\base\Application->run()
+#16 {main}
+2016-10-10 08:26:59 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/account'
+]
+
+$_COOKIE = [
+    '_csrf' => 'fccd657398ca569f1e6ae8f184628b2891339dfe53403f2e4332d67217979f82a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"S0lg60pauIJwvAuhV40FgGO455-DwDDe\";}'
+]
+
+$_SERVER = [
+    'HTTP_ACCEPT' => 'text/html, application/xhtml+xml, image/jxr, */*'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'Keep-Alive'
+    'HTTP_COOKIE' => '_csrf=fccd657398ca569f1e6ae8f184628b2891339dfe53403f2e4332d67217979f82a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22S0lg60pauIJwvAuhV40FgGO455-DwDDe%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;F:\\wamp\\bin\\php\\php7.0.4;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Win32) PHP/7.0.4 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) PHP/7.0.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'F:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/wamp/www'
+    'SERVER_ADMIN' => 'wampserver@otomatic.net'
+    'SCRIPT_FILENAME' => 'F:/wamp/www/mosphere/web/index.php'
+    'REMOTE_PORT' => '63812'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Faccount'
+    'REQUEST_URI' => '/mosphere/web/index.php?r=site%2Faccount'
+    'SCRIPT_NAME' => '/mosphere/web/index.php'
+    'PHP_SELF' => '/mosphere/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1476088019.516
+    'REQUEST_TIME' => 1476088019
+]

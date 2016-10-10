@@ -91,13 +91,6 @@ class SiteController extends Controller
      */
 	public function actionRegister()
 	{
-		$mail= Yii::$app->mailer->compose(); //加载模板这样写：$mail= Yii::$app->mailer->compose('moban',['key'=>'value']);
-		$mail->setTo('296495567@qq.com'); //要发送给那个人的邮箱
-		$mail->setSubject("邮件主题"); //邮件主题
-		$mail->setTextBody('测试text'); //发布纯文字文本
-		$mail->setHtmlBody("hellow,world"); //发送的消息内容
-		var_dump($mail->send());exit;
-		
 	    $model = new RegisterForm();
 	    if ($model->load(Yii::$app->request->post())) {
 	        if ($user = $model->register()) {
@@ -112,9 +105,7 @@ class SiteController extends Controller
 	        }
 	    }
 		
-	    return $this->render('register', [
-	        'model' => $model,
-	    ]);
+	    return $this->render('register', ['model' => $model]);
 	}
     
     /**
@@ -155,5 +146,20 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+    
+    
+    public function actionSendEmail(){
+    	$mail= Yii::$app->mailer->compose(); //加载模板这样写：$mail= Yii::$app->mailer->compose('moban',['key'=>'value']);
+    	$mail->setTo('296495567@qq.com'); //要发送给那个人的邮箱
+    	$mail->setSubject("邮件主题"); //邮件主题
+    	$mail->setTextBody('测试text'); //发布纯文字文本
+    	$mail->setHtmlBody("hellow,world"); //发送的消息内容
+    	var_dump($mail->send());exit;
+    }
+    
+    public function actionAccount(){
+    	$model = new RegisterForm();
+    	return $this->render('account', ['model' => $model]);
     }
 }
