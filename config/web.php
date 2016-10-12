@@ -31,8 +31,8 @@ $config = [
 			'transport' => [ 
 			                'class' => 'Swift_SmtpTransport', 
 			                'host' => 'smtp-mail.outlook.com', 
-			                'username' => 'yangpufeng@outlook.com', 
-			                'password' => '*****', 
+			                'username' => 'yangpufeng@hotmail.com', 
+			                'password' => 'china200851',
 			                'port' => '587', 
 			                'encryption' => 'tls', 
 			],

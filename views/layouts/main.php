@@ -47,17 +47,14 @@ AppAsset::register($this);
             		[
             		'label' => Yii::$app->user->identity->username,
             		'items' => [
-            				'<li>'
-			        			. Html::beginForm(['/site/logout'], 'post', ['class' => 'navbar-form'])
-			        			. Html::submitButton(
-			        					'Logout',
-			        					['class' => 'btn btn-link']
-			        			)
+	            				'<li>'
+			        			. Html::beginForm(['/site/logout'], 'post',['class' => 'navbar-form'])
+			        			. Html::submitButton('Logout',['class' => 'btn btn-link'])
 			        			. Html::endForm()
-        					. '</li>',
-            				'<li class="divider"></li>',
-            				['label' => 'Account', 'url' => '#'],
-            		]
+			        			. '</li>',
+	            				'<li class="divider"></li>',
+	            				['label' => 'Account', 'url' => ['/site/account']],
+	            			   ]
             		]
             )
         ],

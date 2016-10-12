@@ -9,6 +9,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\RegisterForm;
 use app\models\ContactForm;
+use app\models\User;
+use app\models\AccountForm;
 
 class SiteController extends Controller
 {
@@ -130,7 +132,6 @@ class SiteController extends Controller
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
             Yii::$app->session->setFlash('contactFormSubmitted');
-
             return $this->refresh();
         }
         return $this->render('contact', [
@@ -149,17 +150,31 @@ class SiteController extends Controller
     }
     
     
-    public function actionSendEmail(){
+    public function actionSendemail(){
     	$mail= Yii::$app->mailer->compose(); //加载模板这样写：$mail= Yii::$app->mailer->compose('moban',['key'=>'value']);
-    	$mail->setTo('296495567@qq.com'); //要发送给那个人的邮箱
+    	$mail->setTo('651174785@qq.com'); //要发送给那个人的邮箱
     	$mail->setSubject("邮件主题"); //邮件主题
     	$mail->setTextBody('测试text'); //发布纯文字文本
-    	$mail->setHtmlBody("hellow,world"); //发送的消息内容
+    	//$mail->setHtmlBody("hellow,world"); //发送的消息内容
     	var_dump($mail->send());exit;
     }
     
     public function actionAccount(){
-    	$model = new RegisterForm();
+    	$account= new AccountForm();
+    	$model= User::findIdentity(Yii::$app->user->id);
+    	
+	    if ($account->load(Yii::$app->request->post())) {
+	    	if($account->update()){
+	    		return $this->render('about');
+	    	}
+	    
+    		echo "<pre>";
+    		//print_r(Yii::$app->request->post());
+    		echo "</pre>";
+    		exit;
+	    	
+	    }
+	    
     	return $this->render('account', ['model' => $model]);
     }
 }
