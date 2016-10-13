@@ -160,19 +160,12 @@ class SiteController extends Controller
     }
     
     public function actionAccount(){
-    	$account= new AccountForm();
-    	$model= User::findIdentity(Yii::$app->user->id);
-    	
-	    if ($account->load(Yii::$app->request->post())) {
-	    	if($account->update()){
-	    		return $this->render('about');
+    	$model= new AccountForm();
+    	$model->getAccountInfo();
+	    if ($model->load(Yii::$app->request->post())) {
+	    	if($model->update()){
+	    		return $this->render('account');
 	    	}
-	    
-    		echo "<pre>";
-    		//print_r(Yii::$app->request->post());
-    		echo "</pre>";
-    		exit;
-	    	
 	    }
 	    
     	return $this->render('account', ['model' => $model]);
