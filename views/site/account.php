@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		<div>
 			<p>Profile picture</p>
 			<div>
-				<div style="float:left;"><img src="/mosphere/web/statics/images/profile/avatar/<?php echo Yii::$app->user->identity->avatar;?>}" style="width:90px;height:90px;"></div>
+				<div style="float:left;"><img src="<?php echo res?>/images/profile/avatar/<?php echo Yii::$app->user->identity->avatar;?>}" style="width:90px;height:90px;"></div>
 				<div style="margin-left:100px;">
 					<p><button type="button" class="btn btn-default btn-sm"><input type="file"></button></p>
 					

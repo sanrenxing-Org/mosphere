@@ -20,11 +20,11 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 	<div class="team">
 		<div class="avatar">
-			<img src="/mosphere/web/statics/images/profile/avatar/default.jpg">
+			<img src="<?php echo res?>/images/profile/avatar/default.jpg">
 			<span>mos,站长，负责网站的开发与设计</span>
 		</div>
-		<div class="avatar"><img src="/mosphere/web/statics/images/profile/avatar/default.jpg"></div>
-		<div class="avatar"><img src="/mosphere/web/statics/images/profile/avatar/default.jpg"></div>
-		<div class="avatar"><img src="/mosphere/web/statics/images/profile/avatar/default.jpg"></div>
+		<div class="avatar"><img src="<?php echo res?>/images/profile/avatar/default.jpg"></div>
+		<div class="avatar"><img src="<?php echo res?>/images/profile/avatar/default.jpg"></div>
+		<div class="avatar"><img src="<?php echo res?>/images/profile/avatar/default.jpg"></div>
 	</div>
 </div>
