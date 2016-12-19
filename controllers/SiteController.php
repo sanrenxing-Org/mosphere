@@ -163,6 +163,8 @@ class SiteController extends Controller
     	$model= new AccountForm();
     	$model->getAccountInfo();
 	    if ($model->load(Yii::$app->request->post())) {
+	    	$model->avatar = $_POST['avatar'];
+			$upload = new UploadedFile();
 	    	if($model->update()){
 	    		return $this->render('account');
 	    	}

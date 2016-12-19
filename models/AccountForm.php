@@ -12,6 +12,7 @@ use app\models\User;
  */
 class AccountForm extends Model
 {
+	public $avatar;
     public $username;
     public $signature;
     public $email;
